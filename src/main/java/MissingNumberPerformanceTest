@@ -1,0 +1,52 @@
+import java.util.Arrays;
+import java.util.Random;
+
+public class MissingNumberPerformanceTest {
+
+  // Solution 1: Brute Force
+  public int missingNumberBruteForce(int[] nums) {
+    // Implementation of Brute Force solution
+  }
+
+  // Solution 2: HashSet
+  public int missingNumberHashSet(int[] nums) {
+    // Implementation of HashSet solution
+  }
+
+  // Solution 3: Mathematical
+  public int missingNumberMathematical(int[] nums) {
+    // Implementation of Mathematical solution
+  }
+
+  // Performance Test
+  @Test
+  public void testPerformance() {
+    int size = 1000000;
+    int[] nums = new int[size];
+    Random random = new Random();
+    for (int i = 0; i < size; i++) {
+      nums[i] = random.nextInt(size);
+    }
+
+    // Test Brute Force Solution
+    long startTime = System.nanoTime();
+    int result = missingNumberBruteForce(nums);
+    long endTime = System.nanoTime();
+    long timeElapsed = endTime - startTime;
+    System.out.println("Brute Force Solution Time: " + timeElapsed + " ns");
+
+    // Test HashSet Solution
+    startTime = System.nanoTime();
+    result = missingNumberHashSet(nums);
+    endTime = System.nanoTime();
+    timeElapsed = endTime - startTime;
+    System.out.println("HashSet Solution Time: " + timeElapsed + " ns");
+
+    // Test Mathematical Solution
+    startTime = System.nanoTime();
+    result = missingNumberMathematical(nums);
+    endTime = System.nanoTime();
+    timeElapsed = endTime - startTime;
+    System.out.println("Mathematical Solution Time: " + timeElapsed + " ns");
+  }
+}
